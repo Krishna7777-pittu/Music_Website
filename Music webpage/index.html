@@ -1,0 +1,49 @@
+<!DOCTYPE.html>
+<html>
+    <head>
+        <title> Music website </title>
+        <link rel="Stylesheet" href="Style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="image.png" class="logo">
+                <ul>
+                    <li><a href = "#">Home</a> </li>
+                    <li><a href = "#">About</a> </li>
+                    <li><a href = "#">Specifications</a> </li>
+                    <li><a href = "#">Products</a> </li>
+                    <li><a href = "#">Connect</a> </li>
+               </ul>
+            </div>
+            <div class="contewnt">
+                <div class="left-col">
+                    <h1>The <br> Real <br> Music</h1>
+                </div>
+                <div class="right-col"></div>
+                <p> Click here to listen</p>
+                <img src="play.png" id = "icon"> 
+            </div>
+
+        </div>
+        <audio id = "mySong">
+            <source src="Bullettu_Bandi_Dj_mix_2021____Latest_Telugu_Dj_song____Dj_songs_2021__Telugu_Love__songs_DJ(128k).mp3" type="audio/mp3">
+        </audio>
+<script>
+    var mySong = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function() {
+        if(mySong.paused) {
+            mySong.play();
+            icon.src="pause.png"
+        }
+        else {
+            mySong.pause();
+            icon.src="play.png"
+        }
+    }
+</script>
+        
+    </body>
+</html>
